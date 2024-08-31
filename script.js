@@ -2,7 +2,6 @@ document.getElementById('simpleForm').addEventListener("submit",(e)=>{
     e.preventDefault();
     let name=document.getElementById("name").value.trim();
     let age=parseInt(document.getElementById('age').value.trim());
-	let dataInfo=document.getElementById("data-info");
     if (name==="" && isNaN(age)) {
         alert("inputs cannot be empty.");
     }
@@ -16,8 +15,8 @@ document.getElementById('simpleForm').addEventListener("submit",(e)=>{
 		}
 })
 promise.then((message)=>{
-    dataInfo.innerHTML=message
+    alert(message)
 }).catch(Error=>{
-    dataInfo.innerHTML=Error
+    alert(Error)
 })
 })
